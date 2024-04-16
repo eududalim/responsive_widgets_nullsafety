@@ -75,3 +75,8 @@ build/
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 .fvm/flutter_sdk
 .fvm/fvm_config.json
+
+.idea/libraries/Dart_SDK.xml
+.idea/modules.xml
+.idea/workspace.xml
+responsive_widgets.iml
