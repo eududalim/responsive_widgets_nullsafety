@@ -11,4 +11,4 @@ PRODUCT_NAME = example
 PRODUCT_BUNDLE_IDENTIFIER = dev.polazzo.example
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2020 dev.polazzo. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2024 dev.polazzo. All rights reserved.
