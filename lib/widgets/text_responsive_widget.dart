@@ -116,11 +116,7 @@ class TextResponsive extends Text {
     this.maxLines,
     this.semanticsLabel,
     this.textWidthBasis,
-  })  : assert(
-          data != null,
-          'A non-null String must be provided to a Text widget.',
-        ),
-        textSpan = null,
+  })  : textSpan = null,
         super(data,
             key: key,
             style: style,

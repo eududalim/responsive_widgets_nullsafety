@@ -76,7 +76,5 @@ build/
 .fvm/flutter_sdk
 .fvm/fvm_config.json
 
-.idea/libraries/Dart_SDK.xml
-.idea/modules.xml
-.idea/workspace.xml
+.idea/
 responsive_widgets.iml
