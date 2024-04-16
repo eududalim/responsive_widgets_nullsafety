@@ -49,7 +49,8 @@ class EdgeInsetsResponsive extends EdgeInsets {
   /// Creates insets from offsets from the left, top, right, and bottom.
   EdgeInsetsResponsive.fromLTRB(
       double left, double top, double right, double bottom)
-      : super.fromLTRB(left.w, top.h, right.w, bottom.h);
+      : super.fromLTRB(left.w.toDouble(), top.h.toDouble(), right.w.toDouble(),
+            bottom.h.toDouble());
 
   /// Creates insets where all the offsets are `value`.
   ///
@@ -62,7 +63,8 @@ class EdgeInsetsResponsive extends EdgeInsets {
   /// ```
   /// {@end-tool}
   EdgeInsetsResponsive.all(double value)
-      : super.fromLTRB(value.w, value.h, value.w, value.h);
+      : super.fromLTRB(value.w.toDouble(), value.h.toDouble(),
+            value.w.toDouble(), value.h.toDouble());
 
   /// Creates insets with only the given values non-zero.
   ///
@@ -79,7 +81,11 @@ class EdgeInsetsResponsive extends EdgeInsets {
     double top = 0.0,
     double right = 0.0,
     double bottom = 0.0,
-  }) : super.only(left: left.w, top: top.h, right: right.w, bottom: bottom.h);
+  }) : super.only(
+            left: left.w.toDouble(),
+            top: top.h.toDouble(),
+            right: right.w.toDouble(),
+            bottom: bottom.h.toDouble());
 
   /// Creates insets with symmetrical vertical and horizontal offsets.
   ///
@@ -94,7 +100,9 @@ class EdgeInsetsResponsive extends EdgeInsets {
   EdgeInsetsResponsive.symmetric({
     double vertical = 0.0,
     double horizontal = 0.0,
-  }) : super.symmetric(vertical: vertical.h, horizontal: horizontal.w);
+  }) : super.symmetric(
+            vertical: vertical.h.toDouble(),
+            horizontal: horizontal.w.toDouble());
 
   /// An [EdgeInsets] with zero offsets in each direction.
   static const EdgeInsets zero = EdgeInsets.only();

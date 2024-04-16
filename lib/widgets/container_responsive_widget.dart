@@ -11,20 +11,20 @@ class ContainerResponsive extends Container {
   /// `decoration`, you can pass the color as the `color` argument to the
   /// `BoxDecoration`.
   ContainerResponsive({
-    Key key,
-    AlignmentGeometry alignment,
-    EdgeInsetsGeometry padding,
-    Color color,
-    Decoration decoration,
-    Decoration foregroundDecoration,
-    double width,
-    double height,
+    Key? key,
+    AlignmentGeometry? alignment,
+    EdgeInsetsGeometry? padding,
+    Color? color,
+    Decoration? decoration,
+    Decoration? foregroundDecoration,
+    double? width,
+    double? height,
     bool widthResponsive = true,
     bool heightResponsive = true,
-    BoxConstraints constraints,
-    EdgeInsetsGeometry margin,
-    Matrix4 transform,
-    Widget child,
+    BoxConstraints? constraints,
+    EdgeInsetsGeometry? margin,
+    Matrix4? transform,
+    Widget? child,
   }) : super(
             key: key,
             alignment: alignment,
@@ -36,16 +36,18 @@ class ContainerResponsive extends Container {
             height: height,
             constraints: (width != null || height != null)
                 ? constraints?.tighten(
-                        width:
-                            width != null && widthResponsive ? width.w : width,
+                        width: width != null && widthResponsive
+                            ? width.w.toDouble()
+                            : width,
                         height: height != null && heightResponsive
-                            ? height.h
+                            ? height.h.toDouble()
                             : height) ??
                     BoxConstraints.tightFor(
-                        width:
-                            width != null && widthResponsive ? width.w : width,
+                        width: width != null && widthResponsive
+                            ? width.w.toDouble()
+                            : width,
                         height: height != null && heightResponsive
-                            ? height.h
+                            ? height.h.toDouble()
                             : height)
                 : constraints,
             margin: margin,
